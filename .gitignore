@@ -1,0 +1,14 @@
+*.swp
+*.swo
+__pycache__/
+*.pb
+*.pt
+*.pth
+*.xlsx
+_checkpoint.csv
+heatmaps/
+models/
+cleaned_cardium/
+processed_A_raw/
+processed_B_static/
+processed_C_adaptive/
