@@ -58,9 +58,7 @@ Next, `compute_iqa_metrics()` evaluates grayscale brightness ($\mu$), contrast (
 
 * Holds a single grouped, stratified train/validation split fixed across `A_raw`, `B_static`, and `C_adaptive` to isolate the exact contribution of adaptive preprocessing.
 * Generates Grad-CAM overlays on unseen validation scans and computes the normalized activation centroid:
-  $$
-  (c_x, c_y) = \left( \frac{\sum_{x,y} x \cdot \text{CAM}(x,y)}{W \sum_{x,y} \text{CAM}(x,y)}, \frac{\sum_{x,y} y \cdot \text{CAM}(x,y)}{H \sum_{x,y} \text{CAM}(x,y)} \right)
-  $$
+  $$(c_x, c_y) = \left( \frac{\sum_{x,y} x \cdot \text{CAM}(x,y)}{W \sum_{x,y} \text{CAM}(x,y)}, \frac{\sum_{x,y} y \cdot \text{CAM}(x,y)}{H \sum_{x,y} \text{CAM}(x,y)} \right)$$
 * Audits what percentage of validation predictions focus within the central third of the frame ($1/3 \le c_x, c_y \le 2/3$) where the fetal cardiac chambers reside, exporting formatted tables to `ieee_master_report.xlsx` and `ablation_summary.md`.
 
 ## Installation & Quickstart
